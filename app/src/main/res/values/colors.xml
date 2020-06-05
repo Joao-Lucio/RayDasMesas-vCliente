@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#9c27b0</color>
+    <color name="colorPrimaryDark">#7b1fa2</color>
+    <color name="colorAccent">#9c27b0</color>
+
+    <color name="drakgray">#6c6c6c</color>
+
+    <color name="colorPrimarytext">#212121</color>
+    <color name="colorSecondText">#999</color>
+    <color name="colorLink">#1ea4f7</color>
+    <color name="color_padrao_txt">#000000</color>
+    <color name="view_padrao">#ccc</color>
+
+</resources>

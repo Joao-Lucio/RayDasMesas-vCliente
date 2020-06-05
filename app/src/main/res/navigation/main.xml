@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/agendamento">
+
+    <fragment
+        android:id="@+id/agendamento"
+        android:name="com.example.raydasmesasvcliente05_04_20.Fragment_Agendamento"
+        android:label="Agendamento"
+        tools:layout="@layout/fragment__agendamento" />
+    <fragment
+        android:id="@+id/entregue"
+        android:name="com.example.raydasmesasvcliente05_04_20.Fragment_Entregue"
+        android:label="Entregue"
+        tools:layout="@layout/fragment__entregue" />
+    <fragment
+        android:id="@+id/promocao"
+        android:name="com.example.raydasmesasvcliente05_04_20.Fragment_Promocao"
+        android:label="Promoção"
+        tools:layout="@layout/fragment__promocao" />
+    <fragment
+        android:id="@+id/sobre"
+        android:name="com.example.raydasmesasvcliente05_04_20.Fragment_Sobre"
+        android:label="Sobre"
+        tools:layout="@layout/fragment__sobre" />
+    <fragment
+        android:id="@+id/preco"
+        android:name="com.example.raydasmesasvcliente05_04_20.Fragment_Preco"
+        android:label="Preços"
+        tools:layout="@layout/fragment__preco" />
+    <fragment
+        android:id="@+id/sair"
+        android:name="com.example.raydasmesasvcliente05_04_20.Fragment_Sair"
+        android:label=""
+        tools:layout="@layout/fragment__sair" />
+</navigation>

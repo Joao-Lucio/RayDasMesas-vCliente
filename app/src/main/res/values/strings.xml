@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">RayDasMesas</string>
+
+    <string name="fa_a_seu_agendamento">FAÇA SEU AGENDAMENTO</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="informe_data_e_hor_rio_para_entrega">Informe Data e Horário para entrega!</string>
+    <string name="data">Data</string>
+    <string name="hor_rio">Hora</string>
+    <string name="faca_seu_aluguel">Faça seu aluguel!</string>
+    <string name="jogoCompleto">Jogo Completo</string>
+    <string name="Obs_qtdJogo">Obs.: 1 jogo completo é exatamente 1 mesas com as 4 cadeiras!</string>
+    <string name="Pecas">+ Mesas ou Cadeiras?</string>
+    <string name="sim">SIM</string>
+    <string name="nao">NÃO</string>
+    <string name="default_notification_channel_id">0987</string>
+
+    <string-array name="peca_Tipo">
+        <item>Mesa</item>
+        <item>Cadeira</item>
+    </string-array>
+    <string-array name="tipo_endereco">
+        <item>Meu Endereço</item>
+        <item>Minha Localização Atual</item>
+        <item>Outro Endereço</item>
+    </string-array>
+</resources>

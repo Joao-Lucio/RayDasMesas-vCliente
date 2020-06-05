@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity_Add_Alter_Agendamento">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@drawable/toolbar_rounder_corners"
+        android:layout_margin="8dp"
+        android:id="@+id/toolbar_main"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"></androidx.appcompat.widget.Toolbar>
+
+    <!--============================================================================================================================-->
+    <!--================= Etapa 1 ==> Configurar Data e Hora e Quantidade do Aluguel ==============================================================-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:id="@+id/rl_etapa1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+            <!-- Informe data e Hora -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="@string/informe_data_e_hor_rio_para_entrega"
+                        android:textColor="#FFFFFF"
+                        android:background="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:textAlignment="center"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:text="@string/data"
+                                android:textSize="15sp"
+                                android:textColor="@color/color_padrao_txt"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:text="20/02/2020"
+                                android:textSize="20sp"
+                                android:padding="20dp"
+                                android:textColor="@color/color_padrao_txt"
+                                android:id="@+id/tv_data"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:text="@string/hor_rio"
+                                android:textSize="15sp"
+                                android:textColor="@color/color_padrao_txt"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:text="08:00"
+                                android:padding="20dp"
+                                android:textSize="20sp"
+                                android:textColor="@color/color_padrao_txt"
+                                android:id="@+id/tv_horario"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#D8E54DFF"
+                android:layout_marginTop="20dp"
+                android:id="@+id/ll_infor">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:id="@+id/tv_infor_disponivel"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginStart="10dp"
+                        android:text="X"
+                        android:textStyle="bold"
+                        android:id="@+id/tv_fecha"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!-- Quantidade -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="20dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Quantidade que deseja aluguar"
+                            android:inputType="number"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:id="@+id/textInput_edQuantidade"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--============================================================================================================================-->
+                    <!--================= Vai Exibir se for selecionado Jogo Completo ==============================================================-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/ll_pecas_mais"
+                        android:visibility="gone">
+                        <!-- Peças a Mais -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/color_padrao_txt"
+                                android:layout_alignParentLeft="true"
+                                android:textSize="16sp"
+                                android:text="@string/Pecas"/>
+
+                            <RadioGroup
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_alignParentEnd="true"
+                                android:id="@+id/rg_pecas_mais">
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/sim"
+                                    android:textColor="@color/color_padrao_txt"
+                                    android:id="@+id/rb_pecas_sim"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:onClick="rbClick_pecas_mais"/>
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/color_padrao_txt"
+                                    android:checked="true"
+                                    android:text="@string/nao"
+                                    android:id="@+id/rb_pecas_nao"
+                                    android:onClick="rbClick_pecas_mais"/>
+                            </RadioGroup>
+                        </RelativeLayout>
+                        <!-- Quantidade e Tipo de Peças a Mais -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:orientation="horizontal"
+                            android:id="@+id/ll_qtd_tipo">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:layout_weight="1">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Quantas?"
+                                        android:inputType="number"
+                                        android:backgroundTint="@color/colorPrimary"
+                                        android:id="@+id/textInput_edPecaMaisQuantidade"/>
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="7dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/border_botao_nao">
+                                <Spinner
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    style="@style/Widget.AppCompat.Spinner.DropDown"
+                                    android:spinnerMode="dropdown"
+                                    android:forceHasOverlappingRendering="false"
+                                    android:dropDownWidth="match_parent"
+                                    android:backgroundTint="#000000"
+                                    android:id="@+id/sp_tipo"></Spinner>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!-- Buttons Confirmar e Cancelar -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_alignParentLeft="true"
+                            android:text="CANCELAR"
+                            android:background="@drawable/border_botao_nao"
+                            android:onClick="botaoCancelarEtapa1"/>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_alignParentRight="true"
+                            android:text="CONTINUAR"
+                            android:textColor="#FFFFFF"
+                            android:background="@drawable/border_botao_sim"
+                            android:onClick="botaoContinuarEtapa1"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--============================================================================================================================-->
+    <!--================= Etapa 2 ==> Definir Endereço ==============================================================-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/rl_etapa2">
+
+        <include layout="@layout/agendar_etapa_2"/>
+
+    </RelativeLayout>
+
+    <!--============================================================================================================================-->
+    <!--================= Etapa 3 ==> Confirmar do Aluguel ==============================================================-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/rl_etapa3">
+
+        <include layout="@layout/agendar_etapa_3"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

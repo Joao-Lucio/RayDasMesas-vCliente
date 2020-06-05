@@ -1,0 +1,2 @@
+rootProject.name='RayDasMesas vCliente 05_04_20'
+include ':app'
